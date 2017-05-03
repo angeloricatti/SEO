@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
+   <children>
+      <Button fx:id="cmdSelect" layoutX="1051.0" layoutY="46.0" mnemonicParsing="false" onAction="#handleSelect" text="Sfoglia" />
+      <Separator layoutX="683.0" layoutY="87.0" orientation="VERTICAL" prefHeight="557.0" prefWidth="2.0" />
+      <TableView fx:id="tabH1" layoutX="14.0" layoutY="113.0" onMouseClicked="#handleSelectH1" prefHeight="168.0" prefWidth="179.0">
+        <columns>
+          <TableColumn fx:id="columnH1" prefWidth="39.0" resizable="false" text="H1" />
+          <TableColumn fx:id="columnTxt" prefWidth="140.0" text="Testo attuale" />
+        </columns>
+      </TableView>
+      <TextArea fx:id="txtH1" layoutX="216.0" layoutY="110.0" prefHeight="123.0" prefWidth="439.0" wrapText="true" />
+      <Button fx:id="cmdH1" layoutX="397.0" layoutY="252.0" mnemonicParsing="false" onAction="#handleModificaH1" text="Modifica H1" />
+      <ChoiceBox fx:id="cmbIndex" layoutX="805.0" layoutY="123.0" prefWidth="150.0" />
+      <Text layoutX="702.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Index/Follow" wrappingWidth="103.13671875" />
+      <Text fill="BLUE" layoutX="702.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Robots" wrappingWidth="162.13671875">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text fill="BLUE" layoutX="702.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Canonical URLs" wrappingWidth="162.13671875">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="cmbCanonical" layoutX="702.0" layoutY="537.0" prefHeight="22.0" prefWidth="103.0" />
+      <TextField fx:id="txtCanonical" layoutX="851.0" layoutY="538.0" onMouseClicked="#handleURLAttiva" prefHeight="24.0" prefWidth="505.0" />
+      <Text layoutX="707.0" layoutY="531.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attiva/Disattiva" wrappingWidth="103.13671875" />
+      <Text layoutX="855.0" layoutY="531.0" strokeType="OUTSIDE" strokeWidth="0.0" text="URL Canonico" wrappingWidth="103.13671875" />
+      <Text fill="BLUE" layoutX="698.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title e Description" wrappingWidth="162.13671875">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="702.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" wrappingWidth="52.13671875" />
+      <Text layoutX="702.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" wrappingWidth="67.0" />
+      <TextField fx:id="txtTitle" layoutX="769.0" layoutY="346.0" onKeyReleased="#titleCount" prefHeight="25.0" prefWidth="389.0" />
+      <TextArea fx:id="txtDescription" layoutX="769.0" layoutY="383.0" onKeyReleased="#descriptionCount" prefHeight="71.0" prefWidth="389.0" wrapText="true" />
+      <Text fill="BLUE" layoutX="21.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tag H1" wrappingWidth="67.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text fill="BLUE" layoutX="22.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Immagini" wrappingWidth="162.13671875">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tabImg" layoutX="14.0" layoutY="334.0" onMouseClicked="#handleURL" prefHeight="168.0" prefWidth="306.0">
+         <columns>
+            <TableColumn fx:id="columnNumero" prefWidth="25.0" resizable="false" text="N°" />
+            <TableColumn fx:id="columnURL" prefWidth="800.0" text="URL immagine                                                                                                                                                               " />
+         </columns>
+      </TableView>
+      <ImageView fx:id="imgAnteprima" fitHeight="260.0" fitWidth="324.0" layoutX="336.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true" />
+      <Text layoutX="478.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anteprima:" wrappingWidth="67.0" />
+      <TextArea fx:id="txtAltAnteprima" layoutX="63.0" layoutY="552.0" prefHeight="71.0" prefWidth="260.0" wrapText="true" />
+      <TextField fx:id="txtTitleAnteprima" layoutX="63.0" layoutY="510.0" prefHeight="24.0" prefWidth="260.0" />
+      <Text layoutX="28.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alt" wrappingWidth="67.0" />
+      <Text layoutX="28.0" layoutY="526.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" wrappingWidth="52.13671875" />
+      <Text fill="BLUE" layoutX="698.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Keywords" wrappingWidth="162.13671875">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="txtKeyword" layoutX="815.0" layoutY="199.0" prefHeight="89.0" prefWidth="415.0" wrapText="true" />
+      <Text layoutX="705.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inserire le parole chiave separate da una virgola" wrappingWidth="97.0" />
+      <Separator layoutX="15.0" layoutY="297.0" prefHeight="0.0" prefWidth="641.0" />
+      <Button fx:id="cmdImg" layoutX="467.0" layoutY="600.0" mnemonicParsing="false" onAction="#handleModificaIMG" text="Modifica Title e Alt" />
+      <TextField fx:id="countRobots" editable="false" layoutX="764.0" layoutY="80.0" prefHeight="31.0" prefWidth="38.0" visible="false" />
+      <TextField fx:id="countKeywords" editable="false" layoutX="769.0" layoutY="153.0" prefHeight="40.0" prefWidth="38.0" visible="false" />
+      <TextField fx:id="countTitle" editable="false" layoutX="728.0" layoutY="342.0" prefHeight="31.0" prefWidth="38.0" visible="false" />
+      <TextField fx:id="countCanonical" editable="false" layoutX="815.0" layoutY="474.0" prefHeight="31.0" prefWidth="38.0" visible="false" />
+      <TextField fx:id="countDescription" editable="false" layoutX="709.0" layoutY="411.0" prefHeight="31.0" prefWidth="38.0" visible="false" />
+      <Button fx:id="cmdModificaCanonical" layoutX="1185.0" layoutY="600.0" mnemonicParsing="false" onAction="#handleModificaCanonical" text="Modifica Canonical URL" />
+      <ListView fx:id="txtPath" layoutX="174.0" layoutY="46.0" prefHeight="25.0" prefWidth="864.0" />
+      <Button fx:id="cmdAnalizza" layoutX="1114.0" layoutY="46.0" mnemonicParsing="false" onAction="#handleAnalizza" text="Analizza" />
+      <Button fx:id="cmdModificaRobots" layoutX="1245.0" layoutY="122.0" mnemonicParsing="false" onAction="#handleModificaRobots" text="Modifica Robots" />
+      <Button fx:id="cmdModificaKeywords" layoutX="1265.0" layoutY="232.0" mnemonicParsing="false" onAction="#handleModificaKeywords" prefHeight="40.0" prefWidth="73.0" text="Modifica&#10;Keywords" textAlignment="CENTER" />
+      <Button fx:id="cmdModificaTitle" layoutX="1265.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleModificaTitle" text="Modifica Title" />
+      <Button fx:id="cmdModificaDescription" layoutX="1269.0" layoutY="386.0" mnemonicParsing="false" onAction="#handleModificaDescription" prefHeight="40.0" prefWidth="81.0" text="Modifica &#10;Description" textAlignment="CENTER" />
+      <Text layoutX="1256.0" layoutY="663.0" strokeType="OUTSIDE" strokeWidth="0.0" text="©M.C.Software" />
+      <Button fx:id="cmdImpostazioni" layoutX="1268.0" layoutY="441.0" mnemonicParsing="false" onAction="#handleImpostazioni" text="Impostazioni" />
+      <Label fx:id="lblTitleCar" layoutX="1168.0" layoutY="342.0" />
+      <Label fx:id="lblTitlePix" layoutX="1168.0" layoutY="358.0" />
+      <Label fx:id="lblDescCar" layoutX="1168.0" layoutY="398.0" />
+      <Label fx:id="lblDescPix" layoutX="1168.0" layoutY="414.0" />
+   </children>
+</AnchorPane>

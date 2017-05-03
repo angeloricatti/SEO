@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="211.0" prefWidth="435.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ImpostazioniController">
+   <children>
+      <Label layoutX="21.0" layoutY="111.0" text="Title:" />
+      <Label layoutX="211.0" layoutY="111.0" text="Description:" />
+      <TextField fx:id="txtTitleCar" layoutX="60.0" layoutY="93.0" prefHeight="17.0" prefWidth="52.0" />
+      <TextField fx:id="txtDescCar" layoutX="283.0" layoutY="93.0" prefHeight="17.0" prefWidth="52.0" />
+      <TextField fx:id="txtTitlePix" layoutX="60.0" layoutY="124.0" prefHeight="17.0" prefWidth="52.0" />
+      <TextField fx:id="txtDescPix" layoutX="283.0" layoutY="124.0" prefHeight="17.0" prefWidth="52.0" />
+      <Label layoutX="120.0" layoutY="97.0" text="caratteri (65)" />
+      <Label layoutX="343.0" layoutY="97.0" text="caratteri (156)" />
+      <Label layoutX="121.0" layoutY="128.0" text="pixel (482)" />
+      <Label layoutX="343.0" layoutY="128.0" text="pixel (920)" />
+      <Button fx:id="cmdImposta" layoutX="185.0" layoutY="166.0" mnemonicParsing="false" onAction="#setImpostazioni" text="Imposta" />
+      <Label layoutX="21.0" layoutY="17.0" text="Impostazioni title e description" textFill="BLUE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="45.0" text="Da qui è possibile modificare i limiti di carattere e pixel di title e description." />
+      <Label layoutX="21.0" layoutY="62.0" text="Tra parentesi sono indicati i valori consigliati e utilizzati da Google." />
+   </children>
+</AnchorPane>
